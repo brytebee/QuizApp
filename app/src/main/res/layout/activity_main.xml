@@ -1,0 +1,344 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="Read the following question carefully and give your answers appropriately."
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:id="@+id/name"
+                android:textSize="24sp"
+                android:hint="Enter Your Name"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"/>
+
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="1. The relationship between °F and °C temperatures in terms of °C is?" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/q1_first_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerOne"
+                    android:text="°F = 9/5°C + 32" />
+
+                <RadioButton
+                    android:id="@+id/q1_second_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerOne"
+                    android:text="°C = 5/9(°F-32)" />
+
+                <RadioButton
+                    android:id="@+id/q1_third_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerOne"
+                    android:text="°F = 9/5°C – 32" />
+
+                <RadioButton
+                    android:id="@+id/q1_fourth_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerOne"
+                    android:text="°C = 5/9(°F+32)" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="2. The ratio of a km to mile is?" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/q2_first_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerTwo"
+                    android:text="1:1.0" />
+
+                <RadioButton
+                    android:id="@+id/q2_second_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerTwo"
+                    android:text="1:1.1" />
+
+                <RadioButton
+                    android:id="@+id/q2_third_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerTwo"
+                    android:text="1:1.4" />
+
+                <RadioButton
+                    android:id="@+id/q2_fourth_option"
+                    style="@style/RadioButtonStyle"
+                    android:onClick="answerTwo"
+                    android:text="1:1.6" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="3. The minimum distance between the sun and the earth occurs on:" />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="Answer should be in the format: February 01"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="February 01"
+                android:inputType="textCapWords"/>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="4. One Astronomical unit is the average distance between:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Earth and Sun" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Jupiter and Sun" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Earth and Moon" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Pluto and Sun" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="5. On the surface of the moon, the:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Mass and weight become lesser" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Mass remains constant and only weight is lesser" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Only mass is lesser" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Mass and weight both remain unchanged" />
+            </RadioGroup>
+
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="6. A tide in which the high water is lower and low water is higher than normal is:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="spring tide" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Neap tide" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Moon tide" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="None of the above" />
+            </RadioGroup>
+
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="7. Other than Venezuela, which among the following from the South American countries is a member of OPEC?" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Argentina" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Brazil" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Ecuador" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Bolivia" />
+            </RadioGroup>
+
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="8. NAMA-11 group of countries frequently appear in the news in the context of affairs of which one of the following?" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Nuclear Suppliers Group" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="World Bank" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="World Economic Forum" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="World Trade Organisation" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="9. MERCOSUR consists of group of:" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Africa" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Asia" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Latin America" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="South East Asia" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="10. The following has highest energy?" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Blue Light" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Violet Light" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Cyan Light" />
+
+                <RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:onClick=""
+                    android:text="Green Light" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/submitButton"
+                style="@style/ButtonStyle"
+                android:onClick="submit"
+                android:text="Submit" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:text="Reset" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
