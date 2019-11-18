@@ -10,6 +10,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="Read the following question carefully and give your answers appropriately."
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:id="@+id/name"
+            android:textSize="18sp"
+            android:hint="Enter Your Name"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -17,28 +33,12 @@
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="Read the following question carefully and give your answers appropriately."
-                android:textAlignment="center"
-                android:textStyle="italic" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textCapWords"
-                android:id="@+id/name"
-                android:textSize="24sp"
-                android:hint="Enter Your Name"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"/>
-
-
-            <TextView
-                style="@style/TextViewStyle"
                 android:text="1. The relationship between °F and °C temperatures in terms of °C is?" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup1">
 
                 <RadioButton
                     android:id="@+id/q1_first_option"
@@ -71,7 +71,8 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup2">
 
                 <RadioButton
                     android:id="@+id/q2_first_option"
@@ -112,7 +113,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="February 01"
-                android:inputType="textCapWords"/>
+                android:inputType="textCapWords"
+                android:id="@+id/q3Answer"/>
 
             <TextView
                 style="@style/TextViewStyle"
@@ -120,27 +122,32 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup4">
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Earth and Sun" />
+                    android:onClick="answerFour"
+                    android:text="Earth and Sun"
+                    android:id="@+id/q4_first_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Jupiter and Sun" />
+                    android:onClick="answerFour"
+                    android:text="Jupiter and Sun"
+                    android:id="@+id/q4_second_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Earth and Moon" />
+                    android:onClick="answerFour"
+                    android:text="Earth and Moon"
+                    android:id="@+id/q4_third_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Pluto and Sun" />
+                    android:onClick="answerFour"
+                    android:text="Pluto and Sun"
+                    android:id="@+id/q4_fourth_option"/>
             </RadioGroup>
 
             <TextView
@@ -149,59 +156,58 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup5">
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Mass and weight become lesser" />
+                    android:onClick="answerFive"
+                    android:text="Mass and weight become lesser"
+                    android:id="@+id/q5_first_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Mass remains constant and only weight is lesser" />
+                    android:onClick="answerFive"
+                    android:text="Mass remains constant and only weight is lesser"
+                    android:id="@+id/q5_second_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Only mass is lesser" />
+                    android:onClick="answerFive"
+                    android:text="Only mass is lesser"
+                    android:id="@+id/q5_third_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Mass and weight both remain unchanged" />
+                    android:onClick="answerFive"
+                    android:text="Mass and weight both remain unchanged"
+                    android:id="@+id/q5_fourth_option"/>
             </RadioGroup>
 
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="6. A tide in which the high water is lower and low water is higher than normal is:" />
+                android:text="6. Select all planetary bodies" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <CheckBox
+                style="@style/CheckboxStyle"
+                android:text="Earth"
+                android:id="@+id/earth_checkbox"/>
 
-                <RadioButton
-                    style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="spring tide" />
+            <CheckBox
+                style="@style/CheckboxStyle"
+                android:text="Pluto"
+                android:id="@+id/pluto_checkbox"/>
 
-                <RadioButton
-                    style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Neap tide" />
+            <CheckBox
+                style="@style/CheckboxStyle"
+                android:text="Mercury"
+                android:id="@+id/mercury_checkbox"/>
 
-                <RadioButton
-                    style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Moon tide" />
-
-                <RadioButton
-                    style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="None of the above" />
-            </RadioGroup>
-
+            <CheckBox
+                style="@style/CheckboxStyle"
+                android:text="America"
+                android:id="@+id/america_checkbox"/>
 
             <TextView
                 style="@style/TextViewStyle"
@@ -209,27 +215,32 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup7">
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Argentina" />
+                    android:onClick="answerSeven"
+                    android:text="Argentina"
+                    android:id="@+id/q7_first_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Brazil" />
+                    android:onClick="answerSeven"
+                    android:text="Brazil"
+                    android:id="@+id/q7_second_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Ecuador" />
+                    android:onClick="answerSeven"
+                    android:text="Ecuador"
+                    android:id="@+id/q7_third_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Bolivia" />
+                    android:onClick="answerSeven"
+                    android:text="Bolivia"
+                    android:id="@+id/q7_fourth_option"/>
             </RadioGroup>
 
 
@@ -239,27 +250,32 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup8">
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Nuclear Suppliers Group" />
+                    android:onClick="answerEight"
+                    android:text="Nuclear Suppliers Group"
+                    android:id="@+id/q8_first_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="World Bank" />
+                    android:onClick="answerEight"
+                    android:text="World Bank"
+                    android:id="@+id/q8_second_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="World Economic Forum" />
+                    android:onClick="answerEight"
+                    android:text="World Economic Forum"
+                    android:id="@+id/q8_third_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="World Trade Organisation" />
+                    android:onClick="answerEight"
+                    android:text="World Trade Organisation"
+                    android:id="@+id/q8_fourth_option"/>
             </RadioGroup>
 
             <TextView
@@ -268,27 +284,32 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup9">
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Africa" />
+                    android:onClick="answerNine"
+                    android:text="Africa"
+                    android:id="@+id/q9_first_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Asia" />
+                    android:onClick="answerNine"
+                    android:text="Asia"
+                    android:id="@+id/q9_second_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Latin America" />
+                    android:onClick="answerNine"
+                    android:text="Latin America"
+                    android:id="@+id/q9_third_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="South East Asia" />
+                    android:onClick="answerNine"
+                    android:text="South East Asia"
+                    android:id="@+id/q9_fourth_option"/>
             </RadioGroup>
 
             <TextView
@@ -297,27 +318,32 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup10">
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Blue Light" />
+                    android:onClick="answerTen"
+                    android:text="Blue Light"
+                    android:id="@+id/q10_first_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Violet Light" />
+                    android:onClick="answerTen"
+                    android:text="Violet Light"
+                    android:id="@+id/q10_second_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Cyan Light" />
+                    android:onClick="answerTen"
+                    android:text="Cyan Light"
+                    android:id="@+id/q10_third_option"/>
 
                 <RadioButton
                     style="@style/RadioButtonStyle"
-                    android:onClick=""
-                    android:text="Green Light" />
+                    android:onClick="answerTen"
+                    android:text="Green Light"
+                    android:id="@+id/q10_fourth_option"/>
             </RadioGroup>
 
 
@@ -336,7 +362,8 @@
 
             <Button
                 style="@style/ButtonStyle"
-                android:text="Reset" />
+                android:text="Reset"
+                android:onClick="reset"/>
 
         </LinearLayout>
     </LinearLayout>
