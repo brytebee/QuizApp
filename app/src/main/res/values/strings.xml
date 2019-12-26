@@ -1,3 +1,55 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Reset</string>
+    <string name="question10">10. The following has highest energy?</string>
+    <string name="q10optionA">Blue Light</string>
+    <string name="q10optionB">Violet Light</string>
+    <string name="q10optionC">Cyan Light</string>
+    <string name="q10optionD">Green Light</string>
+    <string name="instructions">Read the following question carefully and give your answers appropriately.</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="question1">1. The relationship between °F and °C temperatures in terms of °C is?</string>
+    <string name="question2">2. The ratio of a km to mile is?</string>
+    <string name="question3">3. The minimum distance between the sun and the earth occurs on:</string>
+    <string name="question4">4. One Astronomical unit is the average distance between:</string>
+    <string name="question5">5. On the surface of the moon, the:</string>
+    <string name="question6">6. Select all planetary bodies</string>
+    <string name="question7">7. Other than Venezuela, which among the following from the South American countries is a member of OPEC?</string>
+    <string name="question8">8. NAMA-11 group of countries frequently appear in the news in the context of affairs of which one of the following?</string>
+    <string name="question9">9. MERCOSUR consists of group of:</string>
+    <string name="q9optionB">Asia</string>
+    <string name="q9optionC">Latin America</string>
+    <string name="q9optionD">South East Asia</string>
+    <string name="q9optionA">Africa</string>
+    <string name="q8optionA">Nuclear Suppliers Group</string>
+    <string name="q8optionB">World Bank</string>
+    <string name="q8optionC">World Economic Forum</string>
+    <string name="q8optionD">World Trade Organisation</string>
+    <string name="q7optionA">Argentina</string>
+    <string name="q7optionB">Brazil</string>
+    <string name="q7optionD">Bolivia</string>
+    <string name="q7optionC">Ecuador</string>
+    <string name="q6optionA">Earth</string>
+    <string name="q6optionB">Pluto</string>
+    <string name="q6optionC">Mercury</string>
+    <string name="q6optionD">America</string>
+    <string name="q5optionA">Mass and weight become lesser</string>
+    <string name="q5optionB">Mass remains constant and only weight is lesser</string>
+    <string name="q5optionC">Only mass is lesser</string>
+    <string name="q5optionD">Mass and weight both remain unchanged</string>
+    <string name="q4optionA">Earth and Sun</string>
+    <string name="q4optionB">Jupiter and Sun</string>
+    <string name="q4optionC">Earth and Moon</string>
+    <string name="q4optionD">Pluto and Sun</string>
+    <string name="q3_hint">February 01</string>
+    <string name="q3_instruction">Answer should be in the format: February 01</string>
+    <string name="q2optionA">1:1.0</string>
+    <string name="q2optionB">1:1.1</string>
+    <string name="q2optionC">1:1.4</string>
+    <string name="q2optionD">1:1.6</string>
+    <string name="q1optionA">°F = 9/5°C + 32</string>
+    <string name="q1optionB">°C = 5/9(°F-32)</string>
+    <string name="q1optionC">°F = 9/5°C – 32</string>
+    <string name="q1optionD">°C = 5/9(°F+32)</string>
 </resources>

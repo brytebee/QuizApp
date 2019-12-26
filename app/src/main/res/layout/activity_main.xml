@@ -7,24 +7,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             style="@style/TextViewStyle"
-            android:text="Read the following question carefully and give your answers appropriately."
+            android:text="@string/instructions"
             android:textAlignment="center"
             android:textStyle="italic" />
 
         <EditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard16dp"
+            android:layout_marginRight="@dimen/standard16dp"
+            android:hint="@string/name_hint"
             android:inputType="textCapWords"
-            android:id="@+id/name"
             android:textSize="18sp"
-            android:hint="Enter Your Name"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginEnd="@dimen/standard16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,317 +34,285 @@
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="1. The relationship between °F and °C temperatures in terms of °C is?" />
+                android:text="@string/question1" />
 
             <RadioGroup
+                android:id="@+id/radioGroup1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup1">
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/q1_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerOne"
-                    android:text="°F = 9/5°C + 32" />
+                    android:text="@string/q1optionA" />
 
                 <RadioButton
                     android:id="@+id/q1_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerOne"
-                    android:text="°C = 5/9(°F-32)" />
+                    android:text="@string/q1optionB" />
 
                 <RadioButton
                     android:id="@+id/q1_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerOne"
-                    android:text="°F = 9/5°C – 32" />
+                    android:text="@string/q1optionC" />
 
                 <RadioButton
                     android:id="@+id/q1_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerOne"
-                    android:text="°C = 5/9(°F+32)" />
+                    android:text="@string/q1optionD" />
             </RadioGroup>
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="2. The ratio of a km to mile is?" />
+                android:text="@string/question2" />
 
             <RadioGroup
+                android:id="@+id/radioGroup2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup2">
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/q2_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTwo"
-                    android:text="1:1.0" />
+                    android:text="@string/q2optionA" />
 
                 <RadioButton
                     android:id="@+id/q2_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTwo"
-                    android:text="1:1.1" />
+                    android:text="@string/q2optionB" />
 
                 <RadioButton
                     android:id="@+id/q2_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTwo"
-                    android:text="1:1.4" />
+                    android:text="@string/q2optionC" />
 
                 <RadioButton
                     android:id="@+id/q2_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTwo"
-                    android:text="1:1.6" />
+                    android:text="@string/q2optionD" />
             </RadioGroup>
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="3. The minimum distance between the sun and the earth occurs on:" />
+                android:text="@string/question3" />
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="Answer should be in the format: February 01"
+                android:text="@string/q3_instruction"
                 android:textAlignment="center"
                 android:textStyle="italic" />
 
             <EditText
+                android:id="@+id/q3Answer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="February 01"
-                android:inputType="textCapWords"
-                android:id="@+id/q3Answer"/>
+                android:hint="@string/q3_hint"
+                android:inputType="textCapWords" />
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="4. One Astronomical unit is the average distance between:" />
+                android:text="@string/question4" />
 
             <RadioGroup
+                android:id="@+id/radioGroup4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup4">
+                android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/q4_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFour"
-                    android:text="Earth and Sun"
-                    android:id="@+id/q4_first_option"/>
+                    android:text="@string/q4optionA" />
 
                 <RadioButton
+                    android:id="@+id/q4_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFour"
-                    android:text="Jupiter and Sun"
-                    android:id="@+id/q4_second_option"/>
+                    android:text="@string/q4optionB" />
 
                 <RadioButton
+                    android:id="@+id/q4_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFour"
-                    android:text="Earth and Moon"
-                    android:id="@+id/q4_third_option"/>
+                    android:text="@string/q4optionC" />
 
                 <RadioButton
+                    android:id="@+id/q4_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFour"
-                    android:text="Pluto and Sun"
-                    android:id="@+id/q4_fourth_option"/>
+                    android:text="@string/q4optionD" />
             </RadioGroup>
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="5. On the surface of the moon, the:" />
+                android:text="@string/question5" />
 
             <RadioGroup
+                android:id="@+id/radioGroup5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup5">
+                android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/q5_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFive"
-                    android:text="Mass and weight become lesser"
-                    android:id="@+id/q5_first_option"/>
+                    android:text="@string/q5optionA" />
 
                 <RadioButton
+                    android:id="@+id/q5_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFive"
-                    android:text="Mass remains constant and only weight is lesser"
-                    android:id="@+id/q5_second_option"/>
+                    android:text="@string/q5optionB" />
 
                 <RadioButton
+                    android:id="@+id/q5_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFive"
-                    android:text="Only mass is lesser"
-                    android:id="@+id/q5_third_option"/>
+                    android:text="@string/q5optionC" />
 
                 <RadioButton
+                    android:id="@+id/q5_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerFive"
-                    android:text="Mass and weight both remain unchanged"
-                    android:id="@+id/q5_fourth_option"/>
+                    android:text="@string/q5optionD" />
             </RadioGroup>
 
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="6. Select all planetary bodies" />
+                android:text="@string/question6" />
 
             <CheckBox
+                android:id="@+id/earth_checkbox"
                 style="@style/CheckboxStyle"
-                android:text="Earth"
-                android:id="@+id/earth_checkbox"/>
+                android:text="@string/q6optionA" />
 
             <CheckBox
+                android:id="@+id/pluto_checkbox"
                 style="@style/CheckboxStyle"
-                android:text="Pluto"
-                android:id="@+id/pluto_checkbox"/>
+                android:text="@string/q6optionB" />
 
             <CheckBox
+                android:id="@+id/mercury_checkbox"
                 style="@style/CheckboxStyle"
-                android:text="Mercury"
-                android:id="@+id/mercury_checkbox"/>
+                android:text="@string/q6optionC" />
 
             <CheckBox
+                android:id="@+id/america_checkbox"
                 style="@style/CheckboxStyle"
-                android:text="America"
-                android:id="@+id/america_checkbox"/>
+                android:text="@string/q6optionD" />
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="7. Other than Venezuela, which among the following from the South American countries is a member of OPEC?" />
+                android:text="@string/question7" />
 
             <RadioGroup
+                android:id="@+id/radioGroup7"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup7">
+                android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/q7_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerSeven"
-                    android:text="Argentina"
-                    android:id="@+id/q7_first_option"/>
+                    android:text="@string/q7optionA" />
 
                 <RadioButton
+                    android:id="@+id/q7_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerSeven"
-                    android:text="Brazil"
-                    android:id="@+id/q7_second_option"/>
+                    android:text="@string/q7optionB" />
 
                 <RadioButton
+                    android:id="@+id/q7_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerSeven"
-                    android:text="Ecuador"
-                    android:id="@+id/q7_third_option"/>
+                    android:text="@string/q7optionC" />
 
                 <RadioButton
+                    android:id="@+id/q7_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerSeven"
-                    android:text="Bolivia"
-                    android:id="@+id/q7_fourth_option"/>
+                    android:text="@string/q7optionD" />
             </RadioGroup>
 
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="8. NAMA-11 group of countries frequently appear in the news in the context of affairs of which one of the following?" />
+                android:text="@string/question8" />
 
             <RadioGroup
+                android:id="@+id/radioGroup8"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup8">
+                android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/q8_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerEight"
-                    android:text="Nuclear Suppliers Group"
-                    android:id="@+id/q8_first_option"/>
+                    android:text="@string/q8optionA" />
 
                 <RadioButton
+                    android:id="@+id/q8_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerEight"
-                    android:text="World Bank"
-                    android:id="@+id/q8_second_option"/>
+                    android:text="@string/q8optionB" />
 
                 <RadioButton
+                    android:id="@+id/q8_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerEight"
-                    android:text="World Economic Forum"
-                    android:id="@+id/q8_third_option"/>
+                    android:text="@string/q8optionC" />
 
                 <RadioButton
+                    android:id="@+id/q8_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerEight"
-                    android:text="World Trade Organisation"
-                    android:id="@+id/q8_fourth_option"/>
+                    android:text="@string/q8optionD" />
             </RadioGroup>
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="9. MERCOSUR consists of group of:" />
+                android:text="@string/question9" />
 
             <RadioGroup
+                android:id="@+id/radioGroup9"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup9">
+                android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/q9_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerNine"
-                    android:text="Africa"
-                    android:id="@+id/q9_first_option"/>
+                    android:text="@string/q9optionA" />
 
                 <RadioButton
+                    android:id="@+id/q9_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerNine"
-                    android:text="Asia"
-                    android:id="@+id/q9_second_option"/>
+                    android:text="@string/q9optionB" />
 
                 <RadioButton
+                    android:id="@+id/q9_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerNine"
-                    android:text="Latin America"
-                    android:id="@+id/q9_third_option"/>
+                    android:text="@string/q9optionC" />
 
                 <RadioButton
+                    android:id="@+id/q9_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerNine"
-                    android:text="South East Asia"
-                    android:id="@+id/q9_fourth_option"/>
+                    android:text="@string/q9optionD" />
             </RadioGroup>
 
             <TextView
                 style="@style/TextViewStyle"
-                android:text="10. The following has highest energy?" />
+                android:text="@string/question10" />
 
             <RadioGroup
+                android:id="@+id/radioGroup10"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioGroup10">
+                android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/q10_first_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTen"
-                    android:text="Blue Light"
-                    android:id="@+id/q10_first_option"/>
+                    android:text="@string/q10optionA" />
 
                 <RadioButton
+                    android:id="@+id/q10_second_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTen"
-                    android:text="Violet Light"
-                    android:id="@+id/q10_second_option"/>
+                    android:text="@string/q10optionB" />
 
                 <RadioButton
+                    android:id="@+id/q10_third_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTen"
-                    android:text="Cyan Light"
-                    android:id="@+id/q10_third_option"/>
+                    android:text="@string/q10optionC" />
 
                 <RadioButton
+                    android:id="@+id/q10_fourth_option"
                     style="@style/RadioButtonStyle"
-                    android:onClick="answerTen"
-                    android:text="Green Light"
-                    android:id="@+id/q10_fourth_option"/>
+                    android:text="@string/q10optionD" />
             </RadioGroup>
 
 
@@ -357,13 +326,12 @@
             <Button
                 android:id="@+id/submitButton"
                 style="@style/ButtonStyle"
-                android:onClick="submit"
-                android:text="Submit" />
+                android:text="@string/submit" />
 
             <Button
                 style="@style/ButtonStyle"
-                android:text="Reset"
-                android:onClick="reset"/>
+                android:id="@+id/resetButton"
+                android:text="@string/reset" />
 
         </LinearLayout>
     </LinearLayout>
